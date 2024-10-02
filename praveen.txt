@@ -1,0 +1,87 @@
+1) array sum,product:
+
+#include <stdio.h>
+
+int main()
+{
+   int i,n,sum=0,pro=1;
+   printf("Enter the size of array:");
+   scanf("%d",&n);
+   int arr[n];
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",&arr[i]);
+       sum+=arr[i];
+       pro*=arr[i];
+   }
+   printf("Array elements are:");
+     for(i=0;i<n;i++)
+   {
+       printf("%d",arr[i]);
+   }
+   printf("\nSum =%d \nProduct =%d",sum,pro);
+    return 0;
+}
+
+2) sum of even & odd elements:
+
+#include <stdio.h>
+
+int main()
+{
+    int i,n,odd=0,even=0;
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if((i+1)%2==0)
+        {
+            odd+=arr[i];
+        }
+        else
+        {
+            even+=arr[i];
+        }
+    }
+printf("Sum of odd elements:%d\nSum of even elements:%d",odd,even);
+    return 0;
+}
+
+3) Min & max of array elements:
+
+#include <stdio.h>
+
+int main()
+{
+    int i,n,min,max;
+    printf("Enter array size:");
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    min=max=arr[0];
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
+        else if(arr[i]>max)
+        {
+            max=arr[i];
+        }
+        else
+        {
+            min=max=arr[0];
+        }
+    }
+printf("Min element in array:%d\nMax element in array:%d",min,max);
+    return 0;
+}
