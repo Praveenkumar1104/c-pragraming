@@ -85,3 +85,51 @@ int main()
 printf("Min element in array:%d\nMax element in array:%d",min,max);
     return 0;
 }
+
+4) addition of 2d matrix:
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n,m;
+    printf("Enter the array row size:");
+    scanf("%d",&n);
+    printf("Enter the array column size:");
+    scanf("%d",&m);
+    int arr[n][m],arr1[n][m],arr2[n][m];
+    printf("Array 1:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("Array 2:\n");
+for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            arr2[i][j]=arr[i][j]+arr1[i][j];
+        }
+    }
+    printf("Array 3:\n");
+for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf("%d ",arr2[i][j]);
+        }printf("\n");
+    }
+
+    return 0;
+}
+
